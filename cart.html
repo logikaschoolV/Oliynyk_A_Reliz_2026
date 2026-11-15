@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик та оформлення замовлення — PhonesForU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <span class="logo-text">PhonesForU</span>
+            <svg class="phone-logo-icon" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="2" width="34" height="56" rx="8" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="13" y1="9" x2="27" y2="9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </a>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="index.html#about">Про нас</a>
+            <a href="index.html#shop">Магазин</a>
+            <a href="index.html#reviews">Відгуки</a>
+            <a href="index.html#contacts">Контакти</a>
+            <a href="cart.html" style="font-weight: bold;">🛒 Кошик</a>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs-container">
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Головна</a></li>
+            <li>Оформлення замовлення</li>
+        </ul>
+    </div>
+
+    <!-- Cart & Checkout Section -->
+    <section class="cart-section">
+        <h1 class="page-title">Ваше замовлення</h1>
+
+        <div class="cart-grid">
+            
+            <!-- Left Column: Cart Items & Form -->
+            <div class="cart-left-col">
+                
+                <!-- Cart Items List -->
+                <div class="cart-box">
+                    <h2>1. Товари в кошику</h2>
+                    
+                    <div class="cart-items">
+                        <!-- Item 1 -->
+                        <div class="cart-item">
+                            <div class="cart-item-img">
+                                <a href="product.html"><img src="Group 38.png" alt="iPhone Duo"></a>
+                            </div>
+                            <div class="cart-item-info">
+                                <h3><a href="product.html" style="text-decoration: none; color: inherit;">Apple iPhone Duo 256GB</a></h3>
+                                <p class="item-variant">Колір: Star White</p>
+                                <span class="item-price-mobile">101 500 ₴</span>
+                            </div>
+                            <div class="cart-item-counter">
+                                <span class="qty-num">1 шт.</span>
+                            </div>
+                            <div class="cart-item-price">101 500 ₴</div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="cart-item">
+                            <div class="cart-item-img">
+                                <a href="product.html"><img src="glass iphone.png" alt="Protective Glass"></a>
+                            </div>
+                            <div class="cart-item-info">
+                                <h3><a href="product.html" style="text-decoration: none; color: inherit;">Захисне скло iPhone Duo</a></h3>
+                                <span class="item-price-mobile">1 199 ₴</span>
+                            </div>
+                            <div class="cart-item-counter">
+                                <span class="qty-num">1 шт.</span>
+                            </div>
+                            <div class="cart-item-price">1 199 ₴</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="cart-box checkout-form-box">
+                    <h2>2. Контактні дані</h2>
+                    <form id="checkout-form" action="index.html" method="GET">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Ім'я *</label>
+                                <input type="text" class="form-input" placeholder="Іван" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Прізвище *</label>
+                                <input type="text" class="form-input" placeholder="Іваненко" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Телефон *</label>
+                                <input type="tel" class="form-input" placeholder="+380 (97) 000-00-00" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-input" placeholder="example@mail.com">
+                            </div>
+                        </div>
+
+                        <h2>3. Спосіб доставки</h2>
+                        <div class="radio-options">
+                            <label class="radio-card">
+                                <input type="radio" name="delivery" value="pickup" checked>
+                                <div class="radio-info">
+                                    <strong>Самовивіз з магазину</strong>
+                                    <p>м. Волочиськ, вул. Лисенка, 11а (Безкоштовно)</p>
+                                </div>
+                            </label>
+
+                            <label class="radio-card">
+                                <input type="radio" name="delivery" value="np">
+                                <div class="radio-info">
+                                    <strong>Нова Пошта ( у відділення )</strong>
+                                    <p>За тарифами перевізника</p>
+                                </div>
+                            </label>
+
+                            <label class="radio-card">
+                                <input type="radio" name="delivery" value="courier">
+                                <div class="radio-info">
+                                    <strong>Кур'єрська доставка</strong>
+                                    <p>По місту Волочиськ</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <h2>4. Спосіб оплати</h2>
+                        <div class="radio-options">
+                            <label class="radio-card">
+                                <input type="radio" name="payment" value="cash" checked>
+                                <div class="radio-info">
+                                    <strong>Оплата при отриманні</strong>
+                                    <p>Готівкою або карткою в магазині / відділенні</p>
+                                </div>
+                            </label>
+
+                            <label class="radio-card">
+                                <input type="radio" name="payment" value="online">
+                                <div class="radio-info">
+                                    <strong>Оплата карткою онлайн</strong>
+                                    <p>Visa / Mastercard / Apple Pay</p>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group" style="margin-top: 15px;">
+                            <label>Коментар до замовлення</label>
+                            <textarea class="form-input" rows="3" placeholder="Додаткові побажання чи деталі доставки..."></textarea>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Order Summary -->
+            <div class="cart-right-col">
+                <div class="summary-card">
+                    <h3>Разом</h3>
+                    
+                    <div class="summary-line">
+                        <span>Товари (2):</span>
+                        <span>102 799 ₴</span>
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Доставка:</span>
+                        <span class="free-text">Безкоштовно</span>
+                    </div>
+
+                    <div class="summary-line discount">
+                        <span>Знижка за комплект:</span>
+                        <span>-120 ₴</span>
+                    </div>
+
+                    <!-- Promo Code Block -->
+                    <div class="promo-box">
+                        <input type="text" class="promo-input" placeholder="Промокод">
+                        <button type="button" class="promo-btn">Застосувати</button>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="total-line">
+                        <span>До сплати:</span>
+                        <span class="total-price">102 679 ₴</span>
+                    </div>
+
+                    <button type="submit" form="checkout-form" class="checkout-btn">Підтвердити замовлення</button>
+
+                    <p class="privacy-note">
+                        Натискаючи кнопку, ви погоджуєтеся з умовами обробки персональних даних.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        PhonesForU © 2026<br>
+        Всі права захищені. Найкращі смартфони за доступними цінами.
+    </footer>
+
+</body>
+</html>
